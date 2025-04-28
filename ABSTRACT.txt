@@ -1,0 +1,45 @@
+
+abstract class Animal {
+   
+    public abstract void makeSound();
+
+    // Concrete method
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+
+class Dog extends Animal {
+  
+    @Override
+    public void makeSound() {
+        System.out.println("DOG - Woof! Woof!");
+    }
+}
+
+
+class Cat extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("CAT - Meow! Meow!");
+    }
+}
+
+// Main class to test the abstract class and its subclasses
+public class AbstractClassExample {
+    public static void main(String[] args) {
+        // Creating objects of Dog and Cat
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        // Calling the makeSound method
+        dog.makeSound(); // Output: Woof! Woof!
+        dog.eat(); // Output: This animal eats food.
+
+        // Calling the concrete method
+        cat.makeSound(); // Output: Meow! Meow!
+        cat.eat(); // Output: This animal eats food.
+    }
+}

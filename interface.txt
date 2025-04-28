@@ -1,0 +1,36 @@
+
+interface Animal {
+    void makeSound(); 
+}
+
+
+interface Pet extends Animal {
+    void play(); 
+ }
+
+
+class horse implements Pet {
+
+    @Override
+    public void makeSound() {
+        System.out.println("eheeee! eheeee!");
+    }
+
+
+    @Override
+    public void play() {
+        System.out.println("The horse is running in the fields.");
+    }
+}
+
+
+public class InterfaceExample {
+    public static void main(String[] args) {
+       
+        Pet myhorse = new horse();
+
+       
+        myhorse.makeSound(); 
+        myhorse.play();     
+    }
+}
